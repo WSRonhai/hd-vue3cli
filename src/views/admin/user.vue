@@ -1,5 +1,5 @@
 <template>
-  <h3>layout admin</h3>
+  <h3>admin user</h3>
   <router-view />
 </template>
 

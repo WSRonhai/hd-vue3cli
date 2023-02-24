@@ -1,13 +1,11 @@
+import { App } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
+import routes from './routes'
+import layoutRoutes from './autoload'
+
 const router = createRouter({
     history: createWebHistory(),
-    routes: [
-        {
-            path: '/',
-            name: 'home',
-            component: () => import('../views/home/index.vue')
-        }
-    ]
+    routes:[...routes,...layoutRoutes ],
 })
 export function setupRouter(app:App){
     app.use(router)

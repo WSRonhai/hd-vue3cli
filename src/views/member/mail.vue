@@ -1,6 +1,5 @@
 <template>
-  <h3>layout admin</h3>
-  <router-view />
+  <div>member mail</div>
 </template>
 
 <script setup lang='ts'>

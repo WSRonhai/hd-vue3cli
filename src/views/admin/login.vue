@@ -1,6 +1,5 @@
 <template>
-  <h3>layout admin</h3>
-  <router-view />
+  <h3>admin login</h3>
 </template>
 
 <script setup lang='ts'>
