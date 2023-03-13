@@ -9,7 +9,6 @@ export default defineConfig(({ command, mode }: ConfigEnv) => {
   const isBuild = command == "build";
   const root = process.cwd();
   const env = parseEnv(loadEnv(mode, root));
-console.log(env.VITE_API_URL);
 
   return {
     // plugins: [vue()],

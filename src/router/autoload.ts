@@ -2,7 +2,7 @@
  * 自动生成路由
  */
 import { RouteRecordRaw } from "vue-router";
-import helper from "@/utils/helper";
+import utils from "@/utils/";
 const layouts = import.meta.glob("../layouts/*.vue");
 const views = import.meta.glob("../views/**/*.vue");
 
@@ -42,6 +42,6 @@ function getRoutesByModule(file: string, module: { [key: string]: any }) {
   } as RouteRecordRaw;
   return Object.assign(route, module.path?.path);
 }
-const routers=helper.env.VITE_ROUTER_AUTOLOAD?getRoutes():[]
+const routers=utils.env.VITE_ROUTER_AUTOLOAD?getRoutes():[]
 
 export default routers;
