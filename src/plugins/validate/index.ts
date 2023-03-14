@@ -5,6 +5,7 @@ import { loadLocaleFromURL,localize } from '@vee-validate/i18n'
 //cdn引入中文包
 loadLocaleFromURL('https://unpkg.com/@vee-validate/i18n@4.1.0/dist/locale/zh_CN.json');
 import yup from './yup'
+
 veeValidate.configure({
     generateMessage: localize('zh_CN')
 })
