@@ -1,12 +1,10 @@
-<script setup lang='ts'>
-import {user} from '@/apis/index'
-const response = await fetch("http://127.0.0.1:5173/api/info").then((res) =>
-  res.json()
-);
-const res= await user.info()
+<script setup lang="ts">
+import { user } from "@/apis/";
+const response = await user.info();
+console.log(response.data.name);
 </script>
 <template>
   <div>home index</div>
+  <div>{{ response }}</div>
 </template>
-<style scoped lang='scss'>
-</style>
+<style scoped lang="scss"></style>

@@ -9,3 +9,10 @@ export function info() {
         url: 'info',
     })
 }
+
+export function classmate() {
+    return http.request<user>({
+
+    })
+}
+
