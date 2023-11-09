@@ -1,4 +1,4 @@
-import { App,Component, defineAsyncComponent } from "vue";
+import { App, Component, defineAsyncComponent } from "vue";
 import { setupTailwindcss } from "./tailwindcss";
 import _ from 'lodash'
 
@@ -8,7 +8,10 @@ function autoRegisterComponent(app: App) {
   const components = import.meta.glob('../components/form/*.vue')
   Object.keys(components).forEach(async (key) => {
     const name = key.split('/').pop()?.split('.').shift() as string
-    app.component(name,defineAsyncComponent(components[key]))
+    console.log('name', name, components[key]);
+
+    app.component(_.camelCase(name), components[key])
+    // app.component(_.camelCase(name), defineAsyncComponent(() => components[key]!)
   })
 }
 export function setupPlugins(app: App) {
